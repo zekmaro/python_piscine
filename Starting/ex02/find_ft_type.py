@@ -1,32 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Hello.py                                           :+:      :+:    :+:    #
+#    find_ft_type.py                                    :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/26 14:26:38 by anarama           #+#    #+#              #
-#    Updated: 2025/04/26 14:26:39 by anarama          ###   ########.fr        #
+#    Created: 2025/04/26 14:26:31 by anarama           #+#    #+#              #
+#    Updated: 2025/04/26 14:35:09 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ft_list = ["Hello", "tata!"]
-ft_tuple = ("Hello", "toto!")
-ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello" : "titi!"}
 
-ft_list[1] = "World!"
-
-new_list_tupple = list(ft_tuple)
-new_list_tupple[1] = "Austria!"
-ft_tuple = tuple(new_list_tupple)
-
-ft_set.remove("tutu!")
-ft_set.add("Vienna!")
-
-ft_dict["Hello"] = "42Vienna!"
-
-print(ft_list)
-print(ft_tuple)
-print(ft_set)
-print(ft_dict)
+def all_thing_is_obj(object: any) -> int:
+    type_name = type(object).__name__
+    obj_type = type(object)
+    if obj_type == str:
+        print(f"{object.capitalize()} is in the kitchen: {obj_type}")
+    else:
+        print(f"{type_name.capitalize()}: {obj_type}")
+    return 42
