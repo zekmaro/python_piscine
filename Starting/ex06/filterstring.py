@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     """
     Program that accepts two arguments: a string (S), and an integer (N).
@@ -23,4 +24,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"AssertionError: {e}")
+        sys.exit(1)

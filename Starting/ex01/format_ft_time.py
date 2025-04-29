@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    format_ft_time.py                                  :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/26 14:26:42 by anarama           #+#    #+#              #
-#    Updated: 2025/04/26 14:26:43 by anarama          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 import time
 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -17,7 +5,7 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 seconds = time.time()
 
-print(f"Seconds since January 1, 1970: {seconds} or {seconds:.2e} in scientific notation")
+print(f"Seconds since January 1, 1970: {seconds:,.4f} or {seconds:.2e} in scientific notation")
 
 current_month = time.localtime(seconds).tm_mon
 current_day = time.localtime(seconds).tm_mday

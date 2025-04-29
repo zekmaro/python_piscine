@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    NULL_not_found.py                                  :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/26 14:39:44 by anarama           #+#    #+#              #
-#    Updated: 2025/04/26 15:01:21 by anarama          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 def NULL_not_found(obj: any) -> int:
     if obj is None:
         print(f"Nothing: {obj} {type(obj)}")
@@ -29,4 +17,3 @@ def NULL_not_found(obj: any) -> int:
     else:
         print("Type not Found")
         return 1
-

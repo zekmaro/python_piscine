@@ -7,10 +7,14 @@ def main():
     the sums of its upper-case letters, lower-case letters,
     punctuation characters, digits, and spaces.
     """
-    if len(sys.argv) != 2:
-        raise AssertionError("Incorrect number of arguments.")
+    text = ""
 
-    text = sys.argv[1]
+    if len(sys.argv) > 2:
+        raise AssertionError("Incorrect number of arguments.")
+    elif len(sys.argv) == 2:
+        text = sys.argv[1]
+    else:
+        text = input("What is the text to count?\n")
 
     counts = {
         "upper": 0,
@@ -27,7 +31,7 @@ def main():
             counts["lower"] += 1
         elif c.isdigit():
             counts["digit"] += 1
-        elif c.isspace():
+        elif c.isspace() and c != "\n":
             counts["space"] += 1
         else:
             counts["punctuation"] += 1
@@ -44,5 +48,5 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"AssertionError: {e}")
         sys.exit(1)
