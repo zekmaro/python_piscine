@@ -5,8 +5,9 @@ import sys
 
 def main():
 		"""Program that loads a CSV file and prints its dimensions."""
-		population_total = load("population_total.csv")
-		plot_population(population_total, "France")
+		gdp = load("population_total.csv")
+		life_expectancy_data = load("life_expectancy_years.csv")
+		
 
 
 if __name__ == "__main__":
