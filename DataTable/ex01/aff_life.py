@@ -15,9 +15,7 @@ def plot_life_expectancy(data: pd.DataFrame, country: str) -> None:
 	except ValueError:
 		raise ValueError("The first row of the DataFrame must contain years as integers.")
 
-	print(years)
 	country_data = data[data['country'] == country]
-	print(country_data)
 	plt.figure(figsize=(10, 6))
 	plt.plot(years, country_data.iloc[0, 1:], marker='o', linestyle='-', color='b')
 	plt.title('Life Expectancy Over Years')
@@ -25,5 +23,3 @@ def plot_life_expectancy(data: pd.DataFrame, country: str) -> None:
 	plt.ylabel('Life Expectancy (years)')
 	plt.grid()
 	plt.show()
-
-
